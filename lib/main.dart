@@ -1,6 +1,6 @@
 import 'package:brain_school_starter/screens/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import 'common/constants.dart';
 import 'common/routes.dart';
 
@@ -19,7 +19,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.light().copyWith(
         // scaffold default color
         scaffoldBackgroundColor: kPrimaryColor,
-        primaryColor: kPrimaryColor
+        primaryColor: kPrimaryColor,
+        textTheme: GoogleFonts.sourceSans3TextTheme(
+          Theme.of(context).textTheme.apply()
+        )
       ),
       initialRoute: SplashScreen.routeName,
       routes: routes,
